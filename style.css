@@ -1,34 +1,37 @@
-*{
+* {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  color: white;
 }
-.container{
+.container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg,#153677,#4e085f);
+  background: linear-gradient(135deg, #153677, #4e085f);
   padding: 10px;
 }
-.todo-app{
+.todo-app {
   width: 100%;
   max-width: 450px;
-  background-color: #fff;
+  background-color: transparent;
   margin: 100px auto 20px;
   padding: 30px 30px 60px;
   border-radius: 10px;
+  box-shadow: 15px 15px 15px rgba(56, 49, 49, 0.4),
+    20px 20px 25px rgba(180, 150, 150, 0.2),
+    10px 10px 10px rgba(136, 81, 81, 0.1);
 }
 
-.todo-app h2{
+.todo-app h2 {
   display: flex;
-  color: #002765;
   align-items: center;
   margin-bottom: 20px;
 }
-.todo-app img{
+.todo-app img {
   width: 30px;
   margin-left: 10px;
 }
-.row{
+.row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,19 +40,20 @@
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.row input{
+.row input {
   flex: 1;
   padding: 12px;
   border: none;
   outline: none;
   background: transparent;
+  color: black;
 }
-.row button{
+.row button {
   padding: 12px 20px;
   border-radius: 10px;
   border: none;
   outline: none;
-  background-color:#ff5945;
+  background-color: #ff5945;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
@@ -64,22 +68,38 @@ ul li {
 
 ul li::before {
   content: "";
-  position: absolute; 
-  width: 25px;
-  height: 25px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: url(./images/unchecked.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   top: 50%; /* Center the ::before element vertically */
-  left: 8px;
+  left: 5px;
   transform: translateY(-50%);
 }
-#list-container .checked{
+#list-container .checked {
   color: #555;
   text-decoration: line-through;
 }
 .checked::before {
   background: url(./images/check.png);
+  font-size: 20px;
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  width: 23px;
+  height: 22px;
+  background-color: red;
+  padding: 2px 7px 4px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+}
+ul li span:hover {
+  background-color: rebeccapurple;
+  transition: all 0.5s ease-in-out;
 }
